@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "hardware-vulnerability-scanner": {
+    "browser-scout": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/hardware-vulnerability-scanner",
+            "outputPath": "dist/browser-scout",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": ["zone.js"],
@@ -58,10 +58,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "hardware-vulnerability-scanner:build:production"
+              "browserTarget": "browser-scout:build:production"
             },
             "development": {
-              "browserTarget": "hardware-vulnerability-scanner:build:development"
+              "browserTarget": "browser-scout:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -69,7 +69,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "hardware-vulnerability-scanner:build"
+            "browserTarget": "browser-scout:build"
           }
         },
         "test": {

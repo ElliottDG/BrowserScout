@@ -4,7 +4,6 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 
-
 import { HomeComponent } from './home.component';
 
 describe('HomeComponent', () => {
@@ -13,7 +12,12 @@ describe('HomeComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [MatCardModule, MatDividerModule, MatIconModule, HttpClientModule],
+      imports: [
+        MatCardModule,
+        MatDividerModule,
+        MatIconModule,
+        HttpClientModule,
+      ],
       declarations: [HomeComponent],
       providers: [MatIconRegistry],
     });
@@ -30,12 +34,14 @@ describe('HomeComponent', () => {
     const fixture = TestBed.createComponent(HomeComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('mat-card-title')?.textContent).toContain('Hardware Vulnerability Scanner');
+    expect(compiled.querySelector('mat-card-title')?.textContent).toContain(
+      'Browser Scout'
+    );
   });
 
-  it(`should have as title 'Hardware Vulnerability Scanner'`, () => {
+  it(`should have as title 'Browser Scout'`, () => {
     const fixture = TestBed.createComponent(HomeComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Hardware Vulnerability Scanner');
+    expect(app.title).toEqual('Browser Scout');
   });
 });

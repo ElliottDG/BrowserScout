@@ -1,5 +1,5 @@
 {
-  "name": "hardware-vulnerability-scanner",
+  "name": "browser-scout",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

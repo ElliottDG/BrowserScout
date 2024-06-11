@@ -4,13 +4,12 @@ import { IconsService } from '../services/icons.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
-  title = 'Hardware Vulnerability Scanner';
+  title = 'Browser Scout';
 
-  constructor(private iconsService: IconsService) {
-  }
+  constructor(private iconsService: IconsService) {}
 
   isCompatible: boolean = true;
   ngOnInit(): void {
@@ -20,8 +19,6 @@ export class HomeComponent {
 
   isChromium(): void {
     const userAgent = navigator.userAgent;
-    this.isCompatible =  /Chrome|Chromium|Edg|OPR/.test(userAgent);
+    this.isCompatible = /Chrome|Chromium|Edg|OPR/.test(userAgent);
   }
-
-
 }

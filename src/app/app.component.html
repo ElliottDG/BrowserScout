@@ -7,11 +7,11 @@
     routerLink="/Home"
     routerLinkActive="active"
   >
-    <mat-icon>home</mat-icon>Hardware Vulnerability Scanner
+    <mat-icon>home</mat-icon>{{ title }}
   </button>
   <span class="spacer"></span>
   <!-- Left side nav -->
-  <button
+  <!-- <button
     mat-flat-button
     *ngIf="!isLoggedIn"
     color="primary"
@@ -42,7 +42,7 @@
     (click)="logout()"
   >
     <mat-icon>logout</mat-icon>Logout
-  </button>
+  </button> -->
 </mat-toolbar>
 <div class="centreContent">
   <router-outlet></router-outlet>

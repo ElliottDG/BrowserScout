@@ -37,7 +37,7 @@ export class AppComponent {
     }
   }
 
-  title = 'Hardware Vulnerability Scanner';
+  title = 'Browser Scout';
 
   logout(): void {
     this.sessionService.clean();
