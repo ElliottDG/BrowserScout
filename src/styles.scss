@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+}
+
+.divider {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.mat-mdc-snack-bar-container {
+  &.warn-snackbar {
+    --mdc-snackbar-container-color: #f9bcbc;
+    --mat-mdc-snack-bar-button-color: red;
+    --mdc-snackbar-supporting-text-color: black;
+    --mat-snack-bar-button-color: red;
+  }
+
+  &.success-snackbar {
+    --mdc-snackbar-container-color: #bfe3b4;
+    --mat-mdc-snack-bar-button-color: green;
+    --mdc-snackbar-supporting-text-color: black;
+    --mat-snack-bar-button-color: green;
+  }
+}
+
+.spinner {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 2em;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
