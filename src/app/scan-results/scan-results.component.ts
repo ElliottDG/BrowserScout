@@ -96,7 +96,7 @@ export class ScanResultsComponent {
             let tabledata: Cve = {
               finding: vulnerabilities[i].ScanData.cveData.id,
               device: vulnerabilities[i].ScanData.product,
-              severity: parseFloat(vulnerabilities[i].ScanData.cveData.cvss.v2),
+              severity: vulnerabilities[i].ScanData.cveData.cvss.v2,
               cveLink: this.NVDLINK + vulnerabilities[i].ScanData.cveData.id,
               cwe: vulnerabilities[i].ScanData.cveData.cwes[0],
               status: vulnerabilities[i].ScanData.vulnerable

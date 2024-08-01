@@ -120,7 +120,7 @@ export class LoadDevicesComponent {
               let tabledata: Cve = {
                 finding: vulnerabilities.data[i].cveData.id,
                 device: vulnerabilities.data[i].product,
-                severity: parseFloat(vulnerabilities.data[i].cveData.cvss.v2),
+                severity: vulnerabilities.data[i].cveData.cvss.v2 === null ? vulnerabilities.data[i].cveData.cvss.v3: vulnerabilities.data[i].cveData.cvss.v2,
                 cveLink: this.NVDLINK + vulnerabilities.data[i].cveData.id,
                 cwe: vulnerabilities.data[i].cveData.cwes[0],
                 status: vulnerabilities.data[i].vulnerable
