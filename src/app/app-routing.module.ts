@@ -9,16 +9,14 @@ import { LoadDevicesComponent } from './load-devices/load-devices.component';
 
 const routes: Routes = [
   { path: 'Home', component: HomeComponent },
-  { path: 'ScanResults', component: ScanResultsComponent},
-  { path: 'Login', component: LoginComponent},
-  { path: 'User', component: UserDashboardComponent},
-  { path: 'LoadDevices', component: LoadDevicesComponent},
+  { path: 'ScanResults', component: ScanResultsComponent },
+  { path: 'LoadDevices', component: LoadDevicesComponent },
   { path: '', redirectTo: '/Home', pathMatch: 'full' },
-  { path: '**', component: NotFoundComponent }
+  { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {useHash: true})],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
